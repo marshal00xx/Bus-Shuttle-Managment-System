@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AlloBusLogoUC">
+      <HintPath>..\..\AlloBusLogoUC\AlloBusLogoUC\bin\Debug\AlloBusLogoUC.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>A:\files\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
@@ -102,6 +105,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\road.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
