@@ -113,10 +113,6 @@
     <None Include="Resources\road.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ListShuttlesUC\ListShuttlesUC\ListShuttlesUC.csproj">
-      <Project>{838d0d38-6481-41cb-8aec-5180db2bded8}</Project>
-      <Name>ListShuttlesUC</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OffersUC\OffersUC.csproj">
       <Project>{0389089b-13fd-4308-af01-4e7467350bb0}</Project>
       <Name>OffersUC</Name>
