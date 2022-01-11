@@ -38,9 +38,15 @@ namespace MainForm {
                     break;
                 case "Login":
                     ultimatelogininUC loginUC = new ultimatelogininUC();
-                    this.Controls.Add(loginUC);
-                    loginUC.Location = point;
-                    loginUC.BringToFront();
+                    point = new Point(2, 61);
+                    Panel panel = new Panel();
+                    panel.Location = point;
+                    Size size = new Size(988, 490);
+                    panel.Size = size;
+                    panel.Controls.Add(loginUC);
+                    loginUC.Dock = DockStyle.Fill;
+                    this.Controls.Add(panel);
+                    panel.BringToFront();
                     break;
                 case "Gallery":
                     clientBoardUC clientBoard = new clientBoardUC();

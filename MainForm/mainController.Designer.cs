@@ -35,7 +35,6 @@ namespace MainForm {
             this.offersBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.companiesBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.loginBtn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.userControl11 = new AlloBusLogoUC.UserControl1();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
@@ -53,6 +52,7 @@ namespace MainForm {
             this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.mainPnl = new Guna.UI.WinForms.GunaPanel();
+            this.userControl11 = new AlloBusLogoUC.UserControl1();
             this.guna2Panel1.SuspendLayout();
             this.barPnl.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
@@ -107,6 +107,7 @@ namespace MainForm {
             // 
             // barPnl
             // 
+            this.barPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.barPnl.Controls.Add(this.customerServiceBtn);
             this.barPnl.Controls.Add(this.galleryBtn);
             this.barPnl.Controls.Add(this.offersBtn);
@@ -284,14 +285,6 @@ namespace MainForm {
             this.loginBtn.TabIndex = 4;
             this.loginBtn.Text = "Login";
             this.loginBtn.Click += new System.EventHandler(this.Btns_Click);
-            // 
-            // userControl11
-            // 
-            this.userControl11.BackColor = System.Drawing.Color.White;
-            this.userControl11.Location = new System.Drawing.Point(12, 12);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(172, 57);
-            this.userControl11.TabIndex = 5;
             // 
             // gunaLinePanel1
             // 
@@ -542,6 +535,14 @@ namespace MainForm {
             this.mainPnl.Name = "mainPnl";
             this.mainPnl.Size = new System.Drawing.Size(968, 414);
             this.mainPnl.TabIndex = 4;
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(12, 7);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(172, 57);
+            this.userControl11.TabIndex = 5;
             // 
             // mainController
             // 

@@ -22,7 +22,7 @@ namespace ClientsBoardUC
         private void clientBoardUC_Load(object sender, EventArgs e) {
             try {
                 offerUC offerUc = new offerUC();
-                //offerUc.signedIn = true;
+                offerUc.signedIn = true;
                 searchNdBookPanel.Controls.Add(offerUc);
                 offerUc.Dock = DockStyle.Fill;
             }
