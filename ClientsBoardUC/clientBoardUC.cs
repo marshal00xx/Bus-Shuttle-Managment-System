@@ -18,11 +18,13 @@ namespace ClientsBoardUC
         {
             InitializeComponent();
         }
-
+        private static String _clientId;
+        public String clientId { set { _clientId = value; } }
         private void clientBoardUC_Load(object sender, EventArgs e) {
             try {
                 offerUC offerUc = new offerUC();
                 offerUc.signedIn = true;
+                offerUc.clientId = _clientId;
                 searchNdBookPanel.Controls.Add(offerUc);
                 offerUc.Dock = DockStyle.Fill;
             }
