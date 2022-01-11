@@ -113,6 +113,18 @@
     <None Include="Resources\road.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ClientSignUpUC\ClientSignUpUC\ClientSignUpUC.csproj">
+      <Project>{e31f4c4c-598f-4aea-92a6-7fb62c61d355}</Project>
+      <Name>ClientSignUpUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CompanySignUpUC\CompanySignUpUC\CompanySignUpUC.csproj">
+      <Project>{490b6581-a9e8-475a-afdb-37119c51cb58}</Project>
+      <Name>CompanySignUpUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MainLoginUC\mainLoginUC\MainLoginUC.csproj">
+      <Project>{614a3e80-2e53-4344-9abc-a7fe8f39ac62}</Project>
+      <Name>MainLoginUC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OffersUC\OffersUC.csproj">
       <Project>{0389089b-13fd-4308-af01-4e7467350bb0}</Project>
       <Name>OffersUC</Name>

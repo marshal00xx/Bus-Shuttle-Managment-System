@@ -10,14 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OffersUC;
-using lookForTravelUC;
-
+using ultimateLoginUC;
 namespace MainForm {
     public partial class mainController : Form {
         public mainController() {
             InitializeComponent();
         }
-
         //
         //
         //
@@ -34,7 +32,16 @@ namespace MainForm {
                     offerUC _offerUC = new offerUC();
                     this.Controls.Add(_offerUC);
                     _offerUC.Location = point;
+                    _offerUC.BringToFront();
                     break;
+                case "Login":
+                    ultimatelogininUC loginUC = new ultimatelogininUC();
+                    this.Controls.Add(loginUC);
+                    loginUC.Location = point;
+                    loginUC.BringToFront();
+                    Debug.WriteLine("afdlkj;lakdfjs");
+                    break;
+                
             }
         }
 
@@ -52,6 +59,15 @@ namespace MainForm {
         }
 
         private void offersBtn_Click(object sender, EventArgs e) {
+            try {
+                switcher(((GunaAdvenceButton)sender).Text);
+            }
+            catch (Exception ex) {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e) {
             try {
                 switcher(((GunaAdvenceButton)sender).Text);
             }

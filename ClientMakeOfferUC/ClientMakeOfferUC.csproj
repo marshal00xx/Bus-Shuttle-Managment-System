@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0389089B-13FD-4308-AF01-4E7467350BB0}</ProjectGuid>
+    <ProjectGuid>{D43AEF7F-21EE-4178-85FD-4AEE5A326C99}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>OffersUC</RootNamespace>
-    <AssemblyName>OffersUC</AssemblyName>
+    <RootNamespace>ClientMakeOfferUC</RootNamespace>
+    <AssemblyName>ClientMakeOfferUC</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,12 +33,6 @@
     <Reference Include="Guna.UI">
       <HintPath>A:\files\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\..\lookForTravelUC\lookForTravelUC\bin\Debug\Guna.UI2.dll</HintPath>
-    </Reference>
-    <Reference Include="lookForTravelUC">
-      <HintPath>..\..\lookForTravelUC\lookForTravelUC\bin\Debug\lookForTravelUC.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,37 +47,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="offerUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="offerUC.Designer.cs">
-      <DependentUpon>offerUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="clientMakeOfferUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="clientMakeOfferUC.Designer.cs">
+      <DependentUpon>clientMakeOfferUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="offerUC.resx">
-      <DependentUpon>offerUC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kisspng-tour-bus-service-coach-minibus-shuttle-buses-and-the-mountains-5a997b47b2a459.1894480415200080077317.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClientMakeOfferUC\ClientMakeOfferUC.csproj">
-      <Project>{d43aef7f-21ee-4178-85fd-4aee5a326c99}</Project>
-      <Name>ClientMakeOfferUC</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="clientMakeOfferUC.resx">
+      <DependentUpon>clientMakeOfferUC.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
