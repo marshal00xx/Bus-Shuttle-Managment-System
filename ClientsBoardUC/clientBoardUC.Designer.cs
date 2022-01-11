@@ -1,6 +1,6 @@
 ﻿namespace ClientsBoardUC
 {
-    partial class UserControl1
+    partial class clientBoardUC
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.searchNdBookPanel = new Guna.UI.WinForms.GunaPanel();
             this.SuspendLayout();
             // 
-            // UserControl1
+            // searchNdBookPanel
+            // 
+            this.searchNdBookPanel.Location = new System.Drawing.Point(3, 3);
+            this.searchNdBookPanel.Name = "searchNdBookPanel";
+            this.searchNdBookPanel.Size = new System.Drawing.Size(981, 414);
+            this.searchNdBookPanel.TabIndex = 0;
+            // 
+            // clientBoardUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(987, 482);
+            this.Controls.Add(this.searchNdBookPanel);
+            this.Name = "clientBoardUC";
+            this.Size = new System.Drawing.Size(987, 421);
+            this.Load += new System.EventHandler(this.clientBoardUC_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Guna.UI.WinForms.GunaPanel searchNdBookPanel;
     }
 }

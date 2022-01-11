@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OffersUC;
+using ClientsBoardUC;
+using loginCompanyClientUC;
 using ultimateLoginUC;
 namespace MainForm {
     public partial class mainController : Form {
@@ -39,35 +41,19 @@ namespace MainForm {
                     this.Controls.Add(loginUC);
                     loginUC.Location = point;
                     loginUC.BringToFront();
-                    Debug.WriteLine("afdlkj;lakdfjs");
                     break;
-                
+                case "Gallery":
+                    clientBoardUC clientBoard = new clientBoardUC();
+                    this.Controls.Add(clientBoard);
+                    Point point2 = new Point(3, 71);
+                    clientBoard.Location = point;
+                    clientBoard.Location = point;
+                    clientBoard.BringToFront();
+                    break;
             }
         }
 
-        private void gunaPictureBox4_Click(object sender, EventArgs e) {
-
-        }
-
-        private void companiesBtn_Click(object sender, EventArgs e) {
-            try {
-                switcher(((GunaAdvenceButton)sender).Text);
-            }
-            catch (Exception ex) {
-                Debug.WriteLine(ex.Message);
-            }
-        }
-
-        private void offersBtn_Click(object sender, EventArgs e) {
-            try {
-                switcher(((GunaAdvenceButton)sender).Text);
-            }
-            catch (Exception ex) {
-                Debug.WriteLine(ex.Message);
-            }
-        }
-
-        private void loginBtn_Click(object sender, EventArgs e) {
+        private void Btns_Click(object sender, EventArgs e) {
             try {
                 switcher(((GunaAdvenceButton)sender).Text);
             }

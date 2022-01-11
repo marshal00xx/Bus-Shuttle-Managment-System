@@ -29,7 +29,7 @@ namespace MainForm {
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.barPnl = new Guna.UI2.WinForms.Guna2Panel();
             this.customerServiceBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.galleryBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.offersBtn = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -54,7 +54,7 @@ namespace MainForm {
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.mainPnl = new Guna.UI.WinForms.GunaPanel();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.barPnl.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaLinePanel2.SuspendLayout();
@@ -105,18 +105,18 @@ namespace MainForm {
             this.guna2Panel1.Size = new System.Drawing.Size(105, 36);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // guna2Panel2
+            // barPnl
             // 
-            this.guna2Panel2.Controls.Add(this.customerServiceBtn);
-            this.guna2Panel2.Controls.Add(this.galleryBtn);
-            this.guna2Panel2.Controls.Add(this.offersBtn);
-            this.guna2Panel2.Controls.Add(this.companiesBtn);
-            this.guna2Panel2.Controls.Add(this.loginBtn);
-            this.guna2Panel2.Location = new System.Drawing.Point(230, 61);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(741, 55);
-            this.guna2Panel2.TabIndex = 3;
+            this.barPnl.Controls.Add(this.customerServiceBtn);
+            this.barPnl.Controls.Add(this.galleryBtn);
+            this.barPnl.Controls.Add(this.offersBtn);
+            this.barPnl.Controls.Add(this.companiesBtn);
+            this.barPnl.Controls.Add(this.loginBtn);
+            this.barPnl.Location = new System.Drawing.Point(230, 61);
+            this.barPnl.Name = "barPnl";
+            this.barPnl.ShadowDecoration.Parent = this.barPnl;
+            this.barPnl.Size = new System.Drawing.Size(741, 55);
+            this.barPnl.TabIndex = 3;
             // 
             // customerServiceBtn
             // 
@@ -149,6 +149,7 @@ namespace MainForm {
             this.customerServiceBtn.TabIndex = 6;
             this.customerServiceBtn.Text = "Customer Service";
             this.customerServiceBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.customerServiceBtn.Click += new System.EventHandler(this.Btns_Click);
             // 
             // galleryBtn
             // 
@@ -181,6 +182,7 @@ namespace MainForm {
             this.galleryBtn.TabIndex = 5;
             this.galleryBtn.Text = "Gallery";
             this.galleryBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.galleryBtn.Click += new System.EventHandler(this.Btns_Click);
             // 
             // offersBtn
             // 
@@ -213,7 +215,7 @@ namespace MainForm {
             this.offersBtn.TabIndex = 5;
             this.offersBtn.Text = "Offers";
             this.offersBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.offersBtn.Click += new System.EventHandler(this.offersBtn_Click);
+            this.offersBtn.Click += new System.EventHandler(this.Btns_Click);
             // 
             // companiesBtn
             // 
@@ -247,7 +249,7 @@ namespace MainForm {
             this.companiesBtn.TabIndex = 5;
             this.companiesBtn.Text = "Companies";
             this.companiesBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.companiesBtn.Click += new System.EventHandler(this.companiesBtn_Click);
+            this.companiesBtn.Click += new System.EventHandler(this.Btns_Click);
             // 
             // loginBtn
             // 
@@ -281,7 +283,7 @@ namespace MainForm {
             this.loginBtn.Size = new System.Drawing.Size(74, 42);
             this.loginBtn.TabIndex = 4;
             this.loginBtn.Text = "Login";
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            this.loginBtn.Click += new System.EventHandler(this.Btns_Click);
             // 
             // userControl11
             // 
@@ -507,7 +509,6 @@ namespace MainForm {
             this.gunaPictureBox4.Size = new System.Drawing.Size(173, 116);
             this.gunaPictureBox4.TabIndex = 0;
             this.gunaPictureBox4.TabStop = false;
-            this.gunaPictureBox4.Click += new System.EventHandler(this.gunaPictureBox4_Click);
             // 
             // gunaTextBox4
             // 
@@ -551,12 +552,12 @@ namespace MainForm {
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.mainPnl);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.barPnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainController";
             this.Text = "main";
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
+            this.barPnl.ResumeLayout(false);
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
@@ -580,14 +581,12 @@ namespace MainForm {
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI.WinForms.GunaAdvenceButton loginBtn;
         private Guna.UI.WinForms.GunaAdvenceButton companiesBtn;
         private Guna.UI.WinForms.GunaAdvenceButton offersBtn;
         private Guna.UI.WinForms.GunaAdvenceButton customerServiceBtn;
         private Guna.UI.WinForms.GunaAdvenceButton galleryBtn;
         private AlloBusLogoUC.UserControl1 userControl11;
-        private Guna.UI.WinForms.GunaPanel mainPnl;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox4;
@@ -604,6 +603,8 @@ namespace MainForm {
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        public Guna.UI2.WinForms.Guna2Panel barPnl;
+        public Guna.UI.WinForms.GunaPanel mainPnl;
     }
 }
 

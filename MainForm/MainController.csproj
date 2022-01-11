@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AlloBusLogoUC">
-      <HintPath>..\..\AlloBusLogoUC\AlloBusLogoUC\bin\Debug\AlloBusLogoUC.dll</HintPath>
-    </Reference>
-    <Reference Include="companiesUC">
-      <HintPath>..\..\companiesUC\companiesUC\bin\Debug\companiesUC.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>A:\files\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
@@ -46,9 +40,12 @@
       <HintPath>A:\files\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="lookForTravelUC">
-      <HintPath>..\..\lookForTravelUC\lookForTravelUC\bin\Debug\lookForTravelUC.dll</HintPath>
+      <HintPath>..\..\..\..\source\repos\lookForTravelUC\lookForTravelUC\bin\Debug\lookForTravelUC.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Syncfusion.Licensing, Version=19.4460.0.42, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.19.4.0.42\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -84,6 +81,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,19 +111,35 @@
     <None Include="Resources\road.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ClientSignUpUC\ClientSignUpUC\ClientSignUpUC.csproj">
+    <ProjectReference Include="..\..\..\..\source\repos\AlloBusLogoUC\AlloBusLogoUC\AlloBusLogoUC.csproj">
+      <Project>{529c66f2-add6-46c2-9c31-e9a2a6416f6c}</Project>
+      <Name>AlloBusLogoUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\repos\ClientSignUpUC\ClientSignUpUC\ClientSignUpUC.csproj">
       <Project>{e31f4c4c-598f-4aea-92a6-7fb62c61d355}</Project>
       <Name>ClientSignUpUC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CompanySignUpUC\CompanySignUpUC\CompanySignUpUC.csproj">
+    <ProjectReference Include="..\..\..\..\source\repos\CompanySignUpUC\CompanySignUpUC\CompanySignUpUC.csproj">
       <Project>{490b6581-a9e8-475a-afdb-37119c51cb58}</Project>
       <Name>CompanySignUpUC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\MainLoginUC\mainLoginUC\MainLoginUC.csproj">
+    <ProjectReference Include="..\..\..\..\source\repos\loginCompanyClientUC\loginCompanyClientUC\loginCompanyClientUC.csproj">
+      <Project>{0127061f-6a23-4bcf-b970-52c0c260c4c5}</Project>
+      <Name>loginCompanyClientUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\source\repos\MainLoginUC\mainLoginUC\MainLoginUC.csproj">
       <Project>{614a3e80-2e53-4344-9abc-a7fe8f39ac62}</Project>
       <Name>MainLoginUC</Name>
     </ProjectReference>
-    <ProjectReference Include="..\OffersUC\OffersUC.csproj">
+    <ProjectReference Include="..\ClientMakeOfferUC\ClientMakeOfferUC.csproj">
+      <Project>{d43aef7f-21ee-4178-85fd-4aee5a326c99}</Project>
+      <Name>ClientMakeOfferUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClientsBoardUC\ClientsBoardUC.csproj">
+      <Project>{dbdb5c94-d0b9-4f36-bd10-4d6b7403ad1a}</Project>
+      <Name>ClientsBoardUC</Name>
+    </ProjectReference>
+    <ProjectReference Include="Z:\BusShuttle\OffersUC\OffersUC.csproj">
       <Project>{0389089b-13fd-4308-af01-4e7467350bb0}</Project>
       <Name>OffersUC</Name>
     </ProjectReference>
