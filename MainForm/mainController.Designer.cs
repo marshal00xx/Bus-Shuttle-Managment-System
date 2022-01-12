@@ -52,7 +52,7 @@ namespace MainForm {
             this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.mainPnl = new Guna.UI.WinForms.GunaPanel();
-            this.userControl11 = new AlloBusLogoUC.UserControl1();
+            this.logo = new AlloBusLogoUC.UserControl1();
             this.guna2Panel1.SuspendLayout();
             this.barPnl.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
@@ -536,13 +536,14 @@ namespace MainForm {
             this.mainPnl.Size = new System.Drawing.Size(968, 414);
             this.mainPnl.TabIndex = 4;
             // 
-            // userControl11
+            // logo
             // 
-            this.userControl11.BackColor = System.Drawing.Color.White;
-            this.userControl11.Location = new System.Drawing.Point(12, 7);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(172, 57);
-            this.userControl11.TabIndex = 5;
+            this.logo.BackColor = System.Drawing.Color.White;
+            this.logo.Location = new System.Drawing.Point(12, 7);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(172, 57);
+            this.logo.TabIndex = 5;
+            this.logo.Click += new System.EventHandler(this.logo_Click);
             // 
             // mainController
             // 
@@ -550,13 +551,14 @@ namespace MainForm {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(992, 554);
-            this.Controls.Add(this.userControl11);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.mainPnl);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.barPnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainController";
             this.Text = "main";
+            this.Load += new System.EventHandler(this.mainController_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.barPnl.ResumeLayout(false);
             this.gunaLinePanel1.ResumeLayout(false);
@@ -587,7 +589,7 @@ namespace MainForm {
         private Guna.UI.WinForms.GunaAdvenceButton offersBtn;
         private Guna.UI.WinForms.GunaAdvenceButton customerServiceBtn;
         private Guna.UI.WinForms.GunaAdvenceButton galleryBtn;
-        private AlloBusLogoUC.UserControl1 userControl11;
+        private AlloBusLogoUC.UserControl1 logo;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox4;

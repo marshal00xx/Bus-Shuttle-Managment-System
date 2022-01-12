@@ -18,6 +18,9 @@ namespace MainForm {
         public mainController() {
             InitializeComponent();
         }
+        private void mainController_Load(object sender, EventArgs e) {
+
+        }
         //
         //
         //
@@ -66,6 +69,11 @@ namespace MainForm {
             catch (Exception ex) {
                 Debug.WriteLine(ex.Message);
             }
+        }
+
+        private void logo_Click(object sender, EventArgs e) {
+            mainController_Load(null, EventArgs.Empty);
+
         }
     }
 }

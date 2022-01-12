@@ -27,8 +27,13 @@ namespace CompanyBoardUC
         private void companyBoardUC_Load(object sender, EventArgs e) {
             try {
                 command.CommandType = CommandType.StoredProcedure;
-                setDataSources();
-
+                loadCities();
+                loadCars();
+                loadClinetOffers();
+                addVehiculPanel.Hide();
+                clientOffersPanel.Hide();
+                startDate.MinDate = DateTime.Now;
+                endDate.MinDate = DateTime.Now.AddDays(1);
                 departTime.Format = DateTimePickerFormat.Custom;
                 departTime.CustomFormat = "hh:mm";
                 departTime.ShowUpDown = true;
@@ -42,49 +47,59 @@ namespace CompanyBoardUC
             }
         }
         private void AddAutocarBtn_Click(object sender, EventArgs e) {
-            switcher(addVehiculPanel);
-            using (SqlConnection connection = new SqlConnection(connectionString)) {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "usp_insertAutocar";
-                command.Parameters.Clear();
-                command.Parameters.AddWithValue("@companyId", _companyId);
-                command.Parameters.AddWithValue("@autocarTypeName", _autocarType);
-                command.Parameters.AddWithValue("@autocarWifi", wifiCB.Checked ? "1" : "0");
-                command.Parameters.AddWithValue("@autocarAirConditionaire ", airCB.Checked ? "1" : "0");
-                command.ExecuteNonQuery();
-                MessageBox.Show("Vehicul Added Successfuly");
-
+            try {
+                if (_autocarType != null) {
+                    using (SqlConnection connection = new SqlConnection(connectionString)) {
+                        connection.Open();
+                        command.Connection = connection;
+                        command.CommandText = "usp_insertAutocar";
+                        command.Parameters.Clear();
+                        command.Parameters.AddWithValue("@companyId", _companyId);
+                        command.Parameters.AddWithValue("@autocarTypeName", _autocarType);
+                        command.Parameters.AddWithValue("@autocarWifi", wifiCB.Checked ? "1" : "0");
+                        command.Parameters.AddWithValue("@autocarAirConditionaire ", airCB.Checked ? "1" : "0");
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Vehicul Added Successfuly");
+                        loadCars();
+                    }
+                }
+                else
+                    MessageBox.Show("pick a type");
+            }
+            catch (Exception ex) {
+                Debug.WriteLine(ex.Message);
             }
         }
         private void addOfferBTN_Click(object sender, EventArgs e) {
-            switcher(newOfferPanel);
-            using (SqlConnection connection = new SqlConnection(connectionString)) {
-                connection.Open();
-                command.Connection = connection;
-                command.CommandText = "usp_validateCompanyOffer";
-                command.Parameters.Clear();
-                command.Parameters.AddWithValue("@offerStartDate", startDate.Value);
-                command.Parameters.AddWithValue("@offerEndDate", endDate.Value);
-                command.Parameters.AddWithValue("@origineCity", OriginCityCB.Text);
-                command.Parameters.AddWithValue("@destCity ", destCityCB.Text);
-                command.Parameters.AddWithValue("@offerDepartureTimeGmt ", departTime.Value);
-                command.Parameters.AddWithValue("@offerArrivalTimeGmt ", arrivalTime.Value);
-                command.Parameters.AddWithValue("@offerNumberOfSubscribers ", 0);
-                command.Parameters.AddWithValue("@autocarId ", autoCarCB.Text);
+            try {
+                using (SqlConnection connection = new SqlConnection(connectionString)) {
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandText = "usp_validateCompanyOffer";
+                    command.Parameters.Clear();
+                    command.Parameters.AddWithValue("@offerStartDate", startDate.Value);
+                    command.Parameters.AddWithValue("@offerEndDate", endDate.Value);
+                    command.Parameters.AddWithValue("@origineCity", OriginCityCB.Text);
+                    command.Parameters.AddWithValue("@destCity ", destCityCB.Text);
+                    command.Parameters.AddWithValue("@offerDepartureTimeGmt ", departTime.Value);
+                    command.Parameters.AddWithValue("@offerArrivalTimeGmt ", arrivalTime.Value);
+                    command.Parameters.AddWithValue("@offerNumberOfSubscribers ", 0);
+                    command.Parameters.AddWithValue("@autocarId ", autoCarCB.Text);
 
-                command.ExecuteNonQuery();
-                MessageBox.Show("Vehicul Added Successfuly");
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Offer Added Successfuly");
 
+                }
+            }
+            catch(Exception ex) {
+                Debug.WriteLine(ex.Message);
             }
         }
         private void typeRadioBtns_ckeckedChanged(object sender, EventArgs e) {
             _autocarType = ((Guna2RadioButton)sender).Text;
         }
-        private void switcher(Panel panel) {
-            panel.BringToFront();
-        }
-        public void setDataSources() {
+
+        public void loadCities() {
             try {
                 using (SqlConnection connection = new SqlConnection(connectionString)) {
                     connection.Open();
@@ -98,10 +113,26 @@ namespace CompanyBoardUC
                             table.Load(reader);
                             OriginCityCB.DataSource = table;
                             OriginCityCB.DisplayMember = "cityName";
+                            OriginCityCB.Text = "Origne City";
                             destCityCB.BindingContext = new BindingContext();
                             destCityCB.DataSource = table;
                             destCityCB.DisplayMember = "cityName";
+                            OriginCityCB.Text = "Destination City";
                         }
+                    }
+                }
+            }
+            catch (Exception ex) {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+        private void loadCars() {
+            try {
+                using (SqlConnection connection = new SqlConnection(connectionString)) {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand()) {
+                        command.Connection = connection;
+                        command.CommandType = CommandType.StoredProcedure;
                         command.CommandText = "usp_getFreeAutocars";
                         command.Parameters.AddWithValue("@companyId", _companyId);
                         using (SqlDataReader reader = command.ExecuteReader()) {
@@ -116,6 +147,45 @@ namespace CompanyBoardUC
             catch (Exception ex) {
                 Debug.WriteLine(ex.Message);
             }
+        }
+        private void loadClinetOffers() {
+            try {
+                using (SqlConnection connection = new SqlConnection(connectionString)) {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand()) {
+                        command.Connection = connection;
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.CommandText = "usp_getClinetOffers";
+                        using (SqlDataReader reader = command.ExecuteReader()) {
+                            DataTable table = new DataTable();
+                            table.Load(reader);
+                            dgv.DataSource = table;
+                        }
+                    }
+                }
+            }
+            catch(Exception ex) {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+        private void newOfferBtn_Click(object sender, EventArgs e) {
+            newOfferPanel.Show();
+            addVehiculPanel.Hide();
+            clientOffersPanel.Hide();
+
+        }
+
+        private void newVehiculBTN_Click(object sender, EventArgs e) {
+            addVehiculPanel.Show();
+            newOfferPanel.Hide();
+            clientOffersPanel.Hide();
+        }
+
+        private void clientOffersBTN_Click(object sender, EventArgs e) {
+            clientOffersPanel.Show();
+            loadClinetOffers();
+            addVehiculPanel.Hide();
+            newOfferPanel.Hide();
         }
     }
 }
