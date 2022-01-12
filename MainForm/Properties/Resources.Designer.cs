@@ -83,6 +83,16 @@ namespace MainForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_reload_60 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reload-60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_safety_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-safety-64", resourceCulture);

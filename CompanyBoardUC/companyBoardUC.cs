@@ -160,6 +160,8 @@ namespace CompanyBoardUC
                             DataTable table = new DataTable();
                             table.Load(reader);
                             dgv.DataSource = table;
+                            dgv.Columns[0].Visible = false;
+                            Debug.WriteLine("ADFSLKJ");
                         }
                     }
                 }
@@ -196,8 +198,10 @@ namespace CompanyBoardUC
                         using (SqlCommand command = new SqlCommand()) {
                             command.Connection = connection;
                             command.CommandType = CommandType.StoredProcedure;
-                            command.CommandText = "usp_getClinetOffers";
-                            command.Parameters.AddWithValue("@clientOfferId", dgv.CurrentRow.Cells[0].Value);
+                            command.CommandText = "usp_validateClientOfferAccepted";
+                            Debug.WriteLine(dgv.CurrentRow.Cells[0].Value);
+                            Debug.WriteLine(_companyId);
+                            command.Parameters.AddWithValue("@clientOfferId", dgv.CurrentRow.Cells["clientOfferId"].Value);
                             command.Parameters.AddWithValue("@companyId", _companyId);
                             command.ExecuteNonQuery();
                             MessageBox.Show("Transaction Validated Successfully");

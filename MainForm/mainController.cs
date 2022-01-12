@@ -13,8 +13,12 @@ using OffersUC;
 using ClientsBoardUC;
 using loginCompanyClientUC;
 using ultimateLoginUC;
+using System.Data.SqlClient;
+using System.Configuration;
+
 namespace MainForm {
     public partial class mainController : Form {
+        public static String connectionString = ConfigurationManager.ConnectionStrings["busShuttleLab"].ConnectionString;
         public mainController() {
             InitializeComponent();
         }
@@ -29,9 +33,9 @@ namespace MainForm {
             Point point = new Point(12, 128);
             switch (buttonText) {
                 case "Companies":
-                    /*companiesUC.offerUC companies = new companiesUC.offerUC();
-                    this.Controls.Add(companies);
-                    companies.Location = point;*/
+                    getCompaniesData();
+                    companiesDataPnl.Show();
+                    companiesDataPnl.BringToFront();
                     break;
                 case "Offers":
                     offerUC _offerUC = new offerUC();
@@ -72,8 +76,26 @@ namespace MainForm {
         }
 
         private void logo_Click(object sender, EventArgs e) {
-            mainController_Load(null, EventArgs.Empty);
 
+        }
+
+        private void logo_Load(object sender, EventArgs e) {
+        }
+        private void getCompaniesData() {
+            
+            using (SqlConnection connection = new SqlConnection(connectionString)) {
+                connection.Open();
+                using(SqlCommand command = new SqlCommand()) {
+                    command.CommandText = "usp_getcompaniesData";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Connection = connection;
+                    using(SqlDataReader reader = command.ExecuteReader()) {
+                        DataTable table = new DataTable();
+                        table.Load(reader);
+                        dgv.DataSource = table;
+                    }
+                }
+            }
         }
     }
 }

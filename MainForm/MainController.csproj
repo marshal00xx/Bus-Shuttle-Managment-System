@@ -47,6 +47,7 @@
       <HintPath>..\packages\Syncfusion.Licensing.19.4.0.42\lib\net46\Syncfusion.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -143,6 +144,9 @@
       <Project>{0389089b-13fd-4308-af01-4e7467350bb0}</Project>
       <Name>OffersUC</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reload-60.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

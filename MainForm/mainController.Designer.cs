@@ -25,45 +25,52 @@ namespace MainForm {
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconsPnl = new Guna.UI2.WinForms.Guna2Panel();
             this.barPnl = new Guna.UI2.WinForms.Guna2Panel();
             this.customerServiceBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.galleryBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.offersBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.companiesBtn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.loginBtn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
+            this.pnl1 = new Guna.UI.WinForms.GunaLinePanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLinePanel3 = new Guna.UI.WinForms.GunaLinePanel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLinePanel4 = new Guna.UI.WinForms.GunaLinePanel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.mainPnl = new Guna.UI.WinForms.GunaPanel();
             this.logo = new AlloBusLogoUC.UserControl1();
-            this.guna2Panel1.SuspendLayout();
+            this.gunaPictureBox4 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox3 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.companiesDataPnl = new Guna.UI.WinForms.GunaPanel();
+            this.dgv = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.iconsPnl.SuspendLayout();
             this.barPnl.SuspendLayout();
-            this.gunaLinePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            this.pnl1.SuspendLayout();
             this.gunaLinePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.gunaLinePanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
             this.gunaLinePanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).BeginInit();
             this.mainPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            this.companiesDataPnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DragControl1
@@ -77,7 +84,7 @@ namespace MainForm {
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(116)))), ((int)(((byte)(212)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(5, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(60, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
@@ -89,21 +96,21 @@ namespace MainForm {
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(116)))), ((int)(((byte)(212)))));
             this.guna2ControlBox3.HoverState.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(56, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(111, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.ShadowDecoration.Parent = this.guna2ControlBox3;
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox3.TabIndex = 0;
             // 
-            // guna2Panel1
+            // iconsPnl
             // 
-            this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel1.Controls.Add(this.guna2ControlBox3);
-            this.guna2Panel1.Location = new System.Drawing.Point(885, 3);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(105, 36);
-            this.guna2Panel1.TabIndex = 1;
+            this.iconsPnl.Controls.Add(this.guna2ControlBox1);
+            this.iconsPnl.Controls.Add(this.guna2ControlBox3);
+            this.iconsPnl.Location = new System.Drawing.Point(830, 3);
+            this.iconsPnl.Name = "iconsPnl";
+            this.iconsPnl.ShadowDecoration.Parent = this.iconsPnl;
+            this.iconsPnl.Size = new System.Drawing.Size(160, 36);
+            this.iconsPnl.TabIndex = 1;
             // 
             // barPnl
             // 
@@ -286,21 +293,21 @@ namespace MainForm {
             this.loginBtn.Text = "Login";
             this.loginBtn.Click += new System.EventHandler(this.Btns_Click);
             // 
-            // gunaLinePanel1
+            // pnl1
             // 
-            this.gunaLinePanel1.Controls.Add(this.gunaLabel1);
-            this.gunaLinePanel1.Controls.Add(this.gunaPictureBox1);
-            this.gunaLinePanel1.Controls.Add(this.gunaTextBox1);
-            this.gunaLinePanel1.LineBottom = 2;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(116)))), ((int)(((byte)(212)))));
-            this.gunaLinePanel1.LineLeft = 2;
-            this.gunaLinePanel1.LineRight = 2;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.LineTop = 2;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(27, 19);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(224, 376);
-            this.gunaLinePanel1.TabIndex = 10;
+            this.pnl1.Controls.Add(this.gunaLabel1);
+            this.pnl1.Controls.Add(this.gunaPictureBox1);
+            this.pnl1.Controls.Add(this.gunaTextBox1);
+            this.pnl1.LineBottom = 2;
+            this.pnl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(116)))), ((int)(((byte)(212)))));
+            this.pnl1.LineLeft = 2;
+            this.pnl1.LineRight = 2;
+            this.pnl1.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.pnl1.LineTop = 2;
+            this.pnl1.Location = new System.Drawing.Point(27, 19);
+            this.pnl1.Name = "pnl1";
+            this.pnl1.Size = new System.Drawing.Size(224, 376);
+            this.pnl1.TabIndex = 10;
             // 
             // gunaLabel1
             // 
@@ -312,17 +319,6 @@ namespace MainForm {
             this.gunaLabel1.Size = new System.Drawing.Size(94, 25);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "SAFETY +";
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BackgroundImage = global::MainForm.Properties.Resources.icons8_safety_64;
-            this.gunaPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(26, 27);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(173, 116);
-            this.gunaPictureBox1.TabIndex = 0;
-            this.gunaPictureBox1.TabStop = false;
             // 
             // gunaTextBox1
             // 
@@ -373,17 +369,6 @@ namespace MainForm {
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "CUSTOMER SERVICE";
             // 
-            // gunaPictureBox2
-            // 
-            this.gunaPictureBox2.BackgroundImage = global::MainForm.Properties.Resources.customer_services;
-            this.gunaPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox2.Location = new System.Drawing.Point(26, 27);
-            this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(173, 116);
-            this.gunaPictureBox2.TabIndex = 0;
-            this.gunaPictureBox2.TabStop = false;
-            // 
             // gunaTextBox2
             // 
             this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
@@ -433,17 +418,6 @@ namespace MainForm {
             this.gunaLabel3.TabIndex = 1;
             this.gunaLabel3.Text = "LOWEST PRICES";
             // 
-            // gunaPictureBox3
-            // 
-            this.gunaPictureBox3.BackgroundImage = global::MainForm.Properties.Resources.pricing;
-            this.gunaPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.gunaPictureBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox3.Location = new System.Drawing.Point(26, 27);
-            this.gunaPictureBox3.Name = "gunaPictureBox3";
-            this.gunaPictureBox3.Size = new System.Drawing.Size(173, 116);
-            this.gunaPictureBox3.TabIndex = 0;
-            this.gunaPictureBox3.TabStop = false;
-            // 
             // gunaTextBox3
             // 
             this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
@@ -492,17 +466,6 @@ namespace MainForm {
             this.gunaLabel4.TabIndex = 1;
             this.gunaLabel4.Text = "UNMATCHED BENEFITS";
             // 
-            // gunaPictureBox4
-            // 
-            this.gunaPictureBox4.BackgroundImage = global::MainForm.Properties.Resources.gift;
-            this.gunaPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.gunaPictureBox4.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox4.Location = new System.Drawing.Point(26, 27);
-            this.gunaPictureBox4.Name = "gunaPictureBox4";
-            this.gunaPictureBox4.Size = new System.Drawing.Size(173, 116);
-            this.gunaPictureBox4.TabIndex = 0;
-            this.gunaPictureBox4.TabStop = false;
-            // 
             // gunaTextBox4
             // 
             this.gunaTextBox4.BaseColor = System.Drawing.Color.White;
@@ -530,7 +493,7 @@ namespace MainForm {
             this.mainPnl.Controls.Add(this.gunaLinePanel4);
             this.mainPnl.Controls.Add(this.gunaLinePanel3);
             this.mainPnl.Controls.Add(this.gunaLinePanel2);
-            this.mainPnl.Controls.Add(this.gunaLinePanel1);
+            this.mainPnl.Controls.Add(this.pnl1);
             this.mainPnl.Location = new System.Drawing.Point(12, 128);
             this.mainPnl.Name = "mainPnl";
             this.mainPnl.Size = new System.Drawing.Size(968, 414);
@@ -539,11 +502,122 @@ namespace MainForm {
             // logo
             // 
             this.logo.BackColor = System.Drawing.Color.White;
-            this.logo.Location = new System.Drawing.Point(12, 7);
+            this.logo.Location = new System.Drawing.Point(3, 6);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(172, 57);
             this.logo.TabIndex = 5;
+            this.logo.Load += new System.EventHandler(this.logo_Load);
             this.logo.Click += new System.EventHandler(this.logo_Click);
+            // 
+            // gunaPictureBox4
+            // 
+            this.gunaPictureBox4.BackgroundImage = global::MainForm.Properties.Resources.gift;
+            this.gunaPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.gunaPictureBox4.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox4.Location = new System.Drawing.Point(26, 27);
+            this.gunaPictureBox4.Name = "gunaPictureBox4";
+            this.gunaPictureBox4.Size = new System.Drawing.Size(173, 116);
+            this.gunaPictureBox4.TabIndex = 0;
+            this.gunaPictureBox4.TabStop = false;
+            // 
+            // gunaPictureBox3
+            // 
+            this.gunaPictureBox3.BackgroundImage = global::MainForm.Properties.Resources.pricing;
+            this.gunaPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.gunaPictureBox3.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox3.Location = new System.Drawing.Point(26, 27);
+            this.gunaPictureBox3.Name = "gunaPictureBox3";
+            this.gunaPictureBox3.Size = new System.Drawing.Size(173, 116);
+            this.gunaPictureBox3.TabIndex = 0;
+            this.gunaPictureBox3.TabStop = false;
+            // 
+            // gunaPictureBox2
+            // 
+            this.gunaPictureBox2.BackgroundImage = global::MainForm.Properties.Resources.customer_services;
+            this.gunaPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Location = new System.Drawing.Point(26, 27);
+            this.gunaPictureBox2.Name = "gunaPictureBox2";
+            this.gunaPictureBox2.Size = new System.Drawing.Size(173, 116);
+            this.gunaPictureBox2.TabIndex = 0;
+            this.gunaPictureBox2.TabStop = false;
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackgroundImage = global::MainForm.Properties.Resources.icons8_safety_64;
+            this.gunaPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(26, 27);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(173, 116);
+            this.gunaPictureBox1.TabIndex = 0;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // companiesDataPnl
+            // 
+            this.companiesDataPnl.Controls.Add(this.dgv);
+            this.companiesDataPnl.Location = new System.Drawing.Point(3, 128);
+            this.companiesDataPnl.Name = "companiesDataPnl";
+            this.companiesDataPnl.Size = new System.Drawing.Size(987, 414);
+            this.companiesDataPnl.TabIndex = 11;
+            this.companiesDataPnl.Visible = false;
+            // 
+            // dgv
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv.EnableHeadersVisualStyles = false;
+            this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv.Location = new System.Drawing.Point(53, 46);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersVisible = false;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv.Size = new System.Drawing.Size(863, 346);
+            this.dgv.TabIndex = 1;
+            this.dgv.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgv.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgv.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgv.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgv.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dgv.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgv.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgv.ThemeStyle.HeaderStyle.Height = 30;
+            this.dgv.ThemeStyle.ReadOnly = false;
+            this.dgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgv.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgv.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dgv.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv.ThemeStyle.RowsStyle.Height = 22;
+            this.dgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // mainController
             // 
@@ -552,28 +626,31 @@ namespace MainForm {
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(992, 554);
             this.Controls.Add(this.logo);
+            this.Controls.Add(this.companiesDataPnl);
             this.Controls.Add(this.mainPnl);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.iconsPnl);
             this.Controls.Add(this.barPnl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainController";
             this.Text = "main";
             this.Load += new System.EventHandler(this.mainController_Load);
-            this.guna2Panel1.ResumeLayout(false);
+            this.iconsPnl.ResumeLayout(false);
             this.barPnl.ResumeLayout(false);
-            this.gunaLinePanel1.ResumeLayout(false);
-            this.gunaLinePanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            this.pnl1.ResumeLayout(false);
+            this.pnl1.PerformLayout();
             this.gunaLinePanel2.ResumeLayout(false);
             this.gunaLinePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             this.gunaLinePanel3.ResumeLayout(false);
             this.gunaLinePanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
             this.gunaLinePanel4.ResumeLayout(false);
             this.gunaLinePanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).EndInit();
             this.mainPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            this.companiesDataPnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,7 +659,7 @@ namespace MainForm {
 
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel iconsPnl;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI.WinForms.GunaAdvenceButton loginBtn;
         private Guna.UI.WinForms.GunaAdvenceButton companiesBtn;
@@ -602,12 +679,14 @@ namespace MainForm {
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
-        private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
+        private Guna.UI.WinForms.GunaLinePanel pnl1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
         public Guna.UI2.WinForms.Guna2Panel barPnl;
         public Guna.UI.WinForms.GunaPanel mainPnl;
+        private Guna.UI.WinForms.GunaPanel companiesDataPnl;
+        private Guna.UI2.WinForms.Guna2DataGridView dgv;
     }
 }
 
