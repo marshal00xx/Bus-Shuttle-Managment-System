@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlloBusLogoUC", "..\..\..\s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VallidateSubscriptionUC", "VallidateSubscriptionUC\VallidateSubscriptionUC.csproj", "{A3B4DC47-CDFA-4E98-AC25-140109A7EBE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyBoardUC", "CompanyBoardUC\CompanyBoardUC.csproj", "{185A2EA8-E9DC-4BCC-8FE7-B2EA5A1352D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{A3B4DC47-CDFA-4E98-AC25-140109A7EBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3B4DC47-CDFA-4E98-AC25-140109A7EBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3B4DC47-CDFA-4E98-AC25-140109A7EBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185A2EA8-E9DC-4BCC-8FE7-B2EA5A1352D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185A2EA8-E9DC-4BCC-8FE7-B2EA5A1352D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185A2EA8-E9DC-4BCC-8FE7-B2EA5A1352D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185A2EA8-E9DC-4BCC-8FE7-B2EA5A1352D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{0389089B-13FD-4308-AF01-4E7467350BB0} = {8243E593-517D-421E-B739-08901B487A35}
 		{529C66F2-ADD6-46C2-9C31-E9A2A6416F6C} = {8243E593-517D-421E-B739-08901B487A35}
 		{A3B4DC47-CDFA-4E98-AC25-140109A7EBE2} = {8243E593-517D-421E-B739-08901B487A35}
+		{185A2EA8-E9DC-4BCC-8FE7-B2EA5A1352D0} = {8243E593-517D-421E-B739-08901B487A35}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EC93CC4D-FBDF-4C3B-9487-783E18071A96}
