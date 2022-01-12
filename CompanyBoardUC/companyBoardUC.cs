@@ -187,5 +187,28 @@ namespace CompanyBoardUC
             addVehiculPanel.Hide();
             newOfferPanel.Hide();
         }
+
+        private void dgv_MouseClick(object sender, MouseEventArgs e) {
+            try{
+                if(MessageBox.Show("You wan't to take accept this offer?","Verification", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                    using (SqlConnection connection = new SqlConnection(connectionString)) {
+                        connection.Open();
+                        using (SqlCommand command = new SqlCommand()) {
+                            command.Connection = connection;
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.CommandText = "usp_getClinetOffers";
+                            command.Parameters.AddWithValue("@clientOfferId", dgv.CurrentRow.Cells[0].Value);
+                            command.Parameters.AddWithValue("@companyId", _companyId);
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Transaction Validated Successfully");
+                            loadClinetOffers();
+                        }
+                    }
+                }
+            }
+            catch(Exception ex) {
+                Debug.WriteLine(ex.Message);
+            }
+        }
     }
 }
